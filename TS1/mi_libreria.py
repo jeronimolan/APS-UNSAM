@@ -48,7 +48,7 @@ def mi_funcion_dienteDeSierra(vmax, dc, width, ff, nn, fs):
 #hecha para TS1
 def mi_ruido(A,dist,dc,n,fs):
     """
-    P = potencia o varianza que maneja la distribucion del ruido sin dc
+    A = amplitud de la señal
     dc = componente de continua
     dist = distribucion (normal, uniform)
     n = numero de muestras
@@ -122,7 +122,7 @@ def seno_con_ruido_discreto (A, k , Af, SNR, n, fs):
     return tt, xx_snr
 
 #hecha en clase
-def digitalizador (signal,vfs,B,n,fs,):
+def digitalizador (signal,vfs,B,n,fs):
     tt = np.arange(start = 0, stop = fs/n, step = 1/fs)
     q = 2* vfs / 2**B
     xx =  q * np.round(signal//q)
