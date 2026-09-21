@@ -48,7 +48,7 @@ def mi_funcion_dienteDeSierra(vmax, dc, width, ff, nn, fs):
 #hecha para TS1
 def mi_ruido(P,dist,dc,n,fs):
     """
-    P = amplitud de la señal
+    P = Potencia de la señal
     dc = componente de continua
     dist = distribucion (normal, uniform)
     n = numero de muestras
