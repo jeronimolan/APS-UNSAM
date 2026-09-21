@@ -136,27 +136,8 @@ senos = A * np.sin(fr_x_n) + na_3dB_m
 #Ventanas SNR = 3dB
 
 fig_3SNR, ((rectangular_3, flattop_3),( blackmann_3, coseno_3)) = plt.subplots(2,2, sharex=True)
-fig_3SNR.suptitle("Espectros de densidad de potencia para senos con SNR = 3dB")
-fig_3SNR.tight_layout(h_pad = 3)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+fig_3SNR.suptitle("Espectros de densidad de potencia para senos con SNR = 3dB", y = 1.1)
+fig_3SNR.tight_layout(h_pad = 6, w_pad = 3)
 
 
 
@@ -202,19 +183,13 @@ V_f_rec = np.var(f_max_rec)
 
 ########plot#############
 
-rectangular_3.set_title(f"Rectangular A: S:{S_a_rec:.4f} V:{V_a_rec:.6f} | F: S:{S_f_rec:.4f} V:{V_f_rec:.2f}")
+rectangular_3.set_title(f"Rectangular \n A: S:{S_a_rec:.4f} V:{V_a_rec:.6f} \n F: S:{S_f_rec:.4f} V:{V_f_rec:.2f}")
 rectangular_3.set_xlabel("Frecuencia [Hz]")
 rectangular_3.set_ylabel("Densidad de Potencia [dB]")
 for i in range(R):
     rectangular_3.plot(ww,modulo_db[i],':')
 rectangular_3.set_xlim(235*fs/N,265*fs/N) #comparten los ejes, los acerco en ese rango de x para ver la forma del espectro#
 ##############################################################################
-
-
-
-
-
-
 
 
 
@@ -256,24 +231,13 @@ V_f_flat = np.var(f_max_flat)
 
 ########plot#############
 
-flattop_3.set_title(f"Flattop A: S:{S_a_flat:.4f} V:{V_a_flat:.6f} | F: S:{S_f_flat:.4f} V:{V_f_flat:.2f}")
+flattop_3.set_title(f"Flattop \n A: S:{S_a_flat:.4f} V:{V_a_flat:.6f} \n F: S:{S_f_flat:.4f} V:{V_f_flat:.2f}")
 flattop_3.set_xlabel("Frecuencia [Hz]")
 flattop_3.set_ylabel("Densidad de Potencia [dB]")
 for i in range(R):
     flattop_3.plot(ww,modulo_db[i],':')
 
 ##############################################################################
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -316,27 +280,13 @@ V_f_black = np.var(f_max_black)
 
 ########plot#############
 
-blackmann_3.set_title(f"Blackmann A: S:{S_a_black:.4f} V:{V_a_black:.6f} | F: S:{S_f_black:.4f} V:{V_f_black:.2f}")
+blackmann_3.set_title(f"Blackmann \n A: S:{S_a_black:.4f} V:{V_a_black:.6f} \n F: S:{S_f_black:.4f} V:{V_f_black:.2f}")
 blackmann_3.set_xlabel("Frecuencia [Hz]")
 blackmann_3.set_ylabel("Densidad de Potencia [dB]")
 for i in range(R):
     blackmann_3.plot(ww,modulo_db[i],':')
 
 #############################################################################
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -379,7 +329,7 @@ V_f_cos = np.var(f_max_cos)
 
 ########plot#############
 
-coseno_3.set_title(f"Coseno A: S:{S_a_cos:.4f} V:{V_a_cos:.6f} | F: S:{S_f_cos:.4f} V:{V_f_cos:.2f}")
+coseno_3.set_title(f"Coseno \n A: S:{S_a_cos:.4f} V:{V_a_cos:.6f} \n F: S:{S_f_cos:.4f} V:{V_f_cos:.2f}")
 coseno_3.set_xlabel("Frecuencia [Hz]")
 coseno_3.set_ylabel("Densidad de Potencia [dB]")
 for i in range(R):
@@ -389,10 +339,15 @@ for i in range(R):
 #comparacion en estimacion de frecuencias
 
 plt.figure(10)
-plt.hist(f_max_rec, color = 'orange', histtype='step')
-plt.hist(f_max_flat, color = 'red', histtype='step')
-plt.hist(f_max_black, color = 'purple', histtype='step')
-plt.hist(f_max_cos, color = 'blue', histtype='step')
+plt.title("Histograma de frecuencias según ventana, SNR=3dB")
+plt.xlabel("Frecuencia [Hz]")
+plt.ylabel("Ocurrencias")
+plt.hist(f_max_rec, color = 'orange', histtype='step', label="Rectangular")
+plt.hist(f_max_flat, color = 'red', histtype='step', label = "Flattop")
+plt.hist(f_max_black, color = 'purple', histtype='step', label = "Blackmann")
+plt.hist(f_max_cos, color = 'blue', histtype='step',label = "Coseno")
+plt.ylim(0,65)
+plt.legend(loc = 'best')
 
 #Tablas de comparacion de amplitud/frecuencia y varianza
 
@@ -432,13 +387,6 @@ plt.show()
 
 
 
-
-
-
-
-
-
-
 N = 1000
 fs = 1000
 A = np.sqrt(2)
@@ -473,10 +421,8 @@ senos = A * np.sin(fr_x_n) + na_10dB_m
 #Ventanas SNR = 10dB
 
 fig_10SNR, ((rectangular_10, flattop_10),( blackmann_10, coseno_10)) = plt.subplots(2,2, sharex=True)
-fig_10SNR.suptitle("Espectros de densidad de potencia para senos con SNR = 10dB")
-fig_10SNR.tight_layout(h_pad = 3)
-
-
+fig_10SNR.suptitle("Espectros de densidad de potencia para senos con SNR = 10dB", y = 1.1)
+fig_10SNR.tight_layout(h_pad = 6, w_pad = 3)
 
 
 
@@ -520,19 +466,13 @@ V_f_rec = np.var(f_max_rec)
 
 ########plot#############
 
-rectangular_10.set_title(f"Rectangular A: S:{S_a_rec:.4f} V:{V_a_rec:.6f} | F: S:{S_f_rec:.4f} V:{V_f_rec:.2f}")
+rectangular_10.set_title(f"Rectangular \n A: S:{S_a_rec:.4f} V:{V_a_rec:.6f} \n F: S:{S_f_rec:.4f} V:{V_f_rec:.2f}")
 rectangular_10.set_xlabel("Frecuencia [Hz]")
 rectangular_10.set_ylabel("Densidad de Potencia [dB]")
 for i in range(R):
     rectangular_10.plot(ww,modulo_db[i],':')
 rectangular_10.set_xlim(235*fs/N,265*fs/N) #comparten los ejes, los acerco en ese rango de x para ver la forma del espectro#
 ##############################################################################
-
-
-
-
-
-
 
 
 
@@ -574,24 +514,13 @@ V_f_flat = np.var(f_max_flat)
 
 ########plot#############
 
-flattop_10.set_title(f"Flattop A: S:{S_a_flat:.4f} V:{V_a_flat:.6f} | F: S:{S_f_flat:.4f} V:{V_f_flat:.2f}")
+flattop_10.set_title(f"Flattop \n A: S:{S_a_flat:.4f} V:{V_a_flat:.6f} \n F: S:{S_f_flat:.4f} V:{V_f_flat:.2f}")
 flattop_10.set_xlabel("Frecuencia [Hz]")
 flattop_10.set_ylabel("Densidad de Potencia [dB]")
 for i in range(R):
     flattop_10.plot(ww,modulo_db[i],':')
 
 ##############################################################################
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -634,28 +563,13 @@ V_f_black = np.var(f_max_black)
 
 ########plot#############
 
-blackmann_10.set_title(f"Blackmann A: S:{S_a_black:.4f} V:{V_a_black:.6f} | F: S:{S_f_black:.4f} V:{V_f_black:.2f}")
+blackmann_10.set_title(f"Blackmann A: \n S:{S_a_black:.4f} V:{V_a_black:.6f} \n F: S:{S_f_black:.4f} V:{V_f_black:.2f}")
 blackmann_10.set_xlabel("Frecuencia [Hz]")
 blackmann_10.set_ylabel("Densidad de Potencia [dB]")
 for i in range(R):
     blackmann_10.plot(ww,modulo_db[i],':')
 
 #############################################################################
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 #Ventana a eleccion: 
@@ -697,7 +611,7 @@ V_f_cos = np.var(f_max_cos)
 
 ########plot#############
 
-coseno_10.set_title(f"Coseno A: S:{S_a_cos:.4f} V:{V_a_cos:.6f} | F: S:{S_f_cos:.4f} V:{V_f_cos:.2f}")
+coseno_10.set_title(f"Coseno \n A: S:{S_a_cos:.4f} V:{V_a_cos:.6f} \n F: S:{S_f_cos:.4f} V:{V_f_cos:.2f}")
 coseno_10.set_xlabel("Frecuencia [Hz]")
 coseno_10.set_ylabel("Densidad de Potencia [dB]")
 for i in range(R):
@@ -707,10 +621,15 @@ for i in range(R):
 #comparacion en estimacion de frecuencias
 
 plt.figure(40)
-plt.hist(f_max_rec, color = 'orange', histtype='step')
-plt.hist(f_max_flat, color = 'red', histtype='step')
-plt.hist(f_max_black, color = 'purple', histtype='step')
-plt.hist(f_max_cos, color = 'blue', histtype='step')
+plt.title("Histograma de frecuencias según ventana, SNR=10dB")
+plt.xlabel("Frecuencia [Hz]")
+plt.ylabel("Ocurrencias")
+plt.hist(f_max_rec, color = 'orange', histtype='step', label="Rectangular")
+plt.hist(f_max_flat, color = 'red', histtype='step', label = "Flattop")
+plt.hist(f_max_black, color = 'purple', histtype='step', label = "Blackmann")
+plt.hist(f_max_cos, color = 'blue', histtype='step',label = "Coseno")
+plt.ylim(0,65)
+plt.legend(loc = 'best')
 
 #Tablas de comparacion de amplitud/frecuencia y varianza
 
