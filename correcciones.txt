@@ -1,0 +1,9 @@
+Correcciones de las TSs
+
+* TS3: Desparramo Espectral
+
+    * Gráficos muy bien, pero hubiese estado bueno agregar por los menos para uno de los puntos los gráficos en 
+      valores de potencia por Hertz para comparar con dB por Hertz
+    * Pasá el texto por un corrector que hay errores de ortografía.
+    * En la conclusión decís: ¨Esta convolución es un producto en frecuencia, y dicho producto es lo que se 
+      aprecia en el espectro…¨. Es justamente al revés.
