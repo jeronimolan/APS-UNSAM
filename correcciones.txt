@@ -7,3 +7,11 @@ Correcciones de las TSs
     * Pasá el texto por un corrector que hay errores de ortografía.
     * En la conclusión decís: ¨Esta convolución es un producto en frecuencia, y dicho producto es lo que se 
       aprecia en el espectro…¨. Es justamente al revés.
+
+* TS4: Estimadores
+
+    * Pasar por un corrector el texto que hay errores ortográficos. 
+    * El trabajo está bastante bien, lástima la conclusión. Hay muchas imprecisiones.
+    * No queda claro si el ruido afecta a las estimaciones. 
+    * En los histogramas que mostrás, no se ve bien cómo es la distribución para la ventana Rectangular.
+    * Faltan los histogramas en la estimación de la amplitud de la señal sinusoidal.
