@@ -15,3 +15,16 @@ Correcciones de las TSs
     * No queda claro si el ruido afecta a las estimaciones. 
     * En los histogramas que mostrás, no se ve bien cómo es la distribución para la ventana Rectangular.
     * Faltan los histogramas en la estimación de la amplitud de la señal sinusoidal.
+
+* TS5: Estimación Espectral
+
+    * Pasar por un corrector el texto que hay errores de diferentes tipos.
+    * Falta una justificación de por qué descartaste Blackman-Tukey como método de estimación espectral, que era
+      uno de los métodos propuestos en el enunciado.
+    * En la conclusión decís: "Para las señales de audio, el ancho de banda calculado para las primeras dos 
+      cantidades de bloques se mantuvo bastante cerca del valor asumido:" Qué valor asumido?
+    * En el primer plot con las tres señales de audio, de dónde sacaste que los valores están en Voltas?
+    * En los gráficos de las señales, el eje vertical tiene una etiqueta equivocada. Amplitud en todo caso son 
+      los valores extremos de la señal.
+    * En algunos gráficos del espectro ponés en el eje vertical Densidad de Potencia en dB y en otros en dB/Hz.
+      Con cuál nos quedamos?
