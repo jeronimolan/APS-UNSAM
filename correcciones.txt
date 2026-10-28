@@ -28,3 +28,16 @@ Correcciones de las TSs
       los valores extremos de la señal.
     * En algunos gráficos del espectro ponés en el eje vertical Densidad de Potencia en dB y en otros en dB/Hz.
       Con cuál nos quedamos?
+
+* TS6: Filtros Pasivos
+    * El último gráfico está hecho con software (LTspice), se pide simular como bonus, pero la idea era que lo hagan 
+      a mano como hicieron en los dos primeros filtros.
+    * El criterio en el desarrollo debería haber sido unificado. El desarrollo del segundo filtro debería haber
+      sido presentado como en los otros dos. 
+    * A la introducción le falta más desarrollo. Por ahí parte de lo que escribieron en el desarrollo, lo podían 
+      haber volcado en la introducción.
+    * Pasar por corrector el texto, varios errores de edición tiene el Notebook.
+    * El desarrollo del primer circuito está roto, no puedo ver las ecuaciones como corresponde. Eso pasa porque las
+      ecuaciones están escritas con etiquetas html. Tuve que ir al GitHub para verlo, ahí lo renderiza bien, pero 
+      guarda!
+    * Al segundo filtro le falta un poco más de claridad en el desarrollo.
